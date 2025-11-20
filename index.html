@@ -4,17 +4,17 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Oliver Muñoz Photography</title>
-
-  <!-- Google Fonts: Lato -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <nav>
+  <header class="top-header">
+    <div class="header-left">
+      <h1 class="logo">Oliver Muñoz Photography</h1>
+    </div>
+    <nav class="header-right">
       <ul class="nav-list">
         <li><a href="#home">Home</a></li>
         <li><a href="#live">Live</a></li>
@@ -22,18 +22,19 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-
-    <div class="banner">
-      <h1>Oliver Muñoz</h1>
-      <p class="project-name">Photography Portfolio</p>
-    </div>
   </header>
 
   <main>
-    <section id="home" class="section">
-      <div class="intro">
-        <h2>Welcome</h2>
-        <p>Minimalist photography portfolio. Scroll or use the menu above.</p>
+    <section id="home" class="section home-showcase">
+      <div class="showcase-grid">
+        <a href="#live" class="showcase-block">
+          <img src="images/live1.jpg" alt="Live section preview" />
+          <h2>Live</h2>
+        </a>
+        <a href="#35mm" class="showcase-block">
+          <img src="images/35mm1.jpg" alt="35mm section preview" />
+          <h2>35 mm</h2>
+        </a>
       </div>
     </section>
 
