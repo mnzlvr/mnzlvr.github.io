@@ -4,69 +4,53 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Oliver Muñoz Photography</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="top-header">
-    <div class="header-left">
-      <h1 class="logo">Oliver Muñoz Photography</h1>
-    </div>
-    <nav class="header-right">
-      <ul class="nav-list">
+  <header class="header">
+    <div class="logo">Oliver Muñoz</div>
+    <nav class="nav">
+      <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#live">Live</a></li>
-        <li><a href="#35mm">35 mm</a></li>
+        <li><a href="#film">35 mm</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section id="home" class="section home-showcase">
-      <div class="showcase-grid">
-        <a href="#live" class="showcase-block">
-          <img src="images/live1.jpg" alt="Live section preview" />
-          <h2>Live</h2>
-        </a>
-        <a href="#35mm" class="showcase-block">
-          <img src="images/35mm1.jpg" alt="35mm section preview" />
-          <h2>35 mm</h2>
-        </a>
+    <section id="home" class="fullscreen hero">
+      <div class="hero-text">Photography Portfolio</div>
+    </section>
+
+    <section id="live" class="gallery-section">
+      <h2>Live</h2>
+      <div class="masonry">
+        <img src="images/live1.jpg" alt="Live 1">
+        <img src="images/live2.jpg" alt="Live 2">
       </div>
     </section>
 
-    <section id="live" class="section">
-      <div class="gallery">
-        <h2>Live</h2>
-        <div class="photo-grid">
-          <img src="images/live1.jpg" alt="Live 1">
-          <img src="images/live2.jpg" alt="Live 2">
-        </div>
+    <section id="film" class="gallery-section">
+      <h2>35 mm</h2>
+      <div class="masonry">
+        <img src="images/35mm1.jpg" alt="35mm 1">
+        <img src="images/35mm2.jpg" alt="35mm 2">
       </div>
     </section>
 
-    <section id="35mm" class="section">
-      <div class="gallery">
-        <h2>35 mm</h2>
-        <div class="photo-grid">
-          <img src="images/35mm1.jpg" alt="35mm 1">
-          <img src="images/35mm2.jpg" alt="35mm 2">
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section">
-      <div class="contact-wrapper">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:contact@olivermunozphotography.com">contact@olivermunozphotography.com</a></p>
-      </div>
+    <section id="contact" class="contact-section">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:contact@olivermunozphotography.com">contact@olivermunozphotography.com</a></p>
     </section>
   </main>
 
   <script src="script.js"></script>
 </body>
 </html>
-
