@@ -36,6 +36,7 @@ header {
   font-size: 1.1rem;
   font-weight: 400;
   letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 
 nav ul {
@@ -164,3 +165,4 @@ nav a:hover {
     columns: 1;
   }
 }
+
