@@ -3,21 +3,19 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <link rel="icon" type="image/png" href="assets/favicon.png">
   <title>Oliver Muñoz Photography</title>
 
-  <!-- Google Fonts -->
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
-  <!-- HEADER -->
-  <header class="header">
+<header class="header">
   <div class="logo">OLIVER MUÑOZ</div>
   <nav class="nav">
     <ul>
@@ -29,57 +27,30 @@
   </nav>
 </header>
 
-  <main>
+<main>
 
-    <!-- HERO -->
-    <section id="home" class="hero section">
-      <h1>Photography Portfolio</h1>
-      <p>Live — 35 mm — Visual storytelling</p>
-    </section>
+  <section class="hero fullscreen">
+    <div class="hero-text">Photography Portfolio</div>
+  </section>
 
-    <!-- LIVE GALLERY -->
-    <section id="live" class="section">
-      <h2 class="section-title">Live</h2>
+  <section class="home-previews">
+    <a href="live.html" class="preview-box">
+      <img src="images/live1.jpg" alt="Live Preview">
+      <div class="preview-label">Live Photography</div>
+    </a>
 
-      <div class="photo-grid">
-        <img src="images/live1.jpg" alt="Live 1">
-        <img src="images/live2.jpg" alt="Live 2">
-      </div>
-    </section>
+    <a href="film.html" class="preview-box">
+      <img src="images/35mm1.jpg" alt="35mm Preview">
+      <div class="preview-label">35 mm Film</div>
+    </a>
+  </section>
 
-    <!-- FILM GALLERY -->
-    <section id="film" class="section">
-      <h2 class="section-title">35 mm</h2>
+</main>
 
-      <div class="photo-grid">
-        <img src="images/35mm1.jpg" alt="35mm 1">
-        <img src="images/35mm2.jpg" alt="35mm 2">
-      </div>
-    </section>
+<footer class="footer">
+  © 2025 Oliver Muñoz — All rights reserved.
+</footer>
 
-    <!-- CONTACT -->
-    <section id="contact" class="section">
-      <h2 class="section-title">Contact</h2>
-
-      <div class="contact-wrapper">
-        <p>Email: 
-          <a href="mailto:contact@olivermunozphotography.com">
-            contact@olivermunozphotography.com
-          </a>
-        </p>
-      </div>
-    </section>
-
-  </main>
-
-  <script src="script.js"></script>
-
+<script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
