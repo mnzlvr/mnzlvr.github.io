@@ -36,8 +36,6 @@ header {
   font-size: 1.1rem;
   font-weight: 400;
   letter-spacing: 0.05em;
-  text-decoration: none;
-  color: inherit;
 }
 
 nav ul {
@@ -233,4 +231,5 @@ button:hover {
     height: 280px;
   }
 }
+
 
