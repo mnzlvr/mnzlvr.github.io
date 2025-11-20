@@ -1,18 +1,9 @@
-// Smooth scrolling is already handled by CSS (scroll-behavior: smooth).
-// This keeps things lightweight and clean.
-
-// SECTION REVEAL ON SCROLL
+// Intersection Observer for fade-in effect (applies only if .section exists)
 const sections = document.querySelectorAll('.section');
-
-const observer = new IntersectionObserver((entries) => {
+const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      observer.unobserve(entry.target); // Reveal once only
-    }
+    if (entry.isIntersecting) entry.target.classList.add('visible');
   });
-}, {
-  threshold: 0.15
-});
+}, { threshold: 0.1 });
 
-sections.forEach(section => observer.observe(section));
+sections.forEach(sec => observer.observe(sec));
