@@ -118,19 +118,22 @@ nav a:hover {
 
 .masonry {
   column-count: 3;
-  column-gap: 1.2rem;
+  column-gap: 1.5rem;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .masonry img {
   width: 100%;
-  margin-bottom: 1.2rem;
-  display: block;
+  margin-bottom: 1.5rem;
+  border-radius: 3px;
   object-fit: cover;
-  transition: opacity 0.25s;
+  transition: opacity .25s ease;
+  display: block;
 }
 
 .masonry img:hover {
-  opacity: 0.8;
+  opacity: .8;
 }
 
 /* CONTACT FORM */
@@ -220,6 +223,7 @@ button:hover {
     height: 280px;
   }
 }
+
 
 
 
