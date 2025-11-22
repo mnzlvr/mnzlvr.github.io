@@ -73,6 +73,45 @@ nav a:hover {
   opacity: 0.9;
 }
 
+/* HOME PREVIEWS */
+.home-previews {
+  display: flex;
+  gap: 2rem;
+  padding: 4rem 2.5rem;
+  margin-top: 2rem;
+}
+
+.preview-box {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  display: block;
+  border-radius: 4px;
+}
+
+.preview-box img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  transition: transform 0.5s ease, opacity 0.3s ease;
+}
+
+.preview-box:hover img {
+  transform: scale(1.02);
+  opacity: 0.9;
+}
+
+.preview-label {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  font-size: 1.4rem;
+  color: white;
+  letter-spacing: 0.03em;
+  text-shadow: 0 3px 10px rgba(0,0,0,0.5);
+}
+
 /* HOME GRID */
 .home-grid {
   display: grid;
@@ -227,6 +266,7 @@ button:hover {
     height: 280px;
   }
 }
+
 
 
 
