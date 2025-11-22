@@ -66,13 +66,6 @@ nav a:hover {
   margin-top: 6rem;
 }
 
-.hero-text {
-  font-size: 3rem;
-  font-weight: 300;
-  letter-spacing: 0.03em;
-  opacity: 0.9;
-}
-
 /* HOME GRID */
 .home-grid {
   display: grid;
@@ -227,6 +220,7 @@ button:hover {
     height: 280px;
   }
 }
+
 
 
 
