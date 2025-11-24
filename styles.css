@@ -153,6 +153,17 @@ nav a:hover {
     opacity: 0.8;
 }
 
+/* NEW RULE: TALL IMAGES SPAN MORE ROWS */
+.masonry .vertical {
+    grid-row: span 50; /* Adjust this number (e.g., 50) until your tall images look right */
+}
+
+/* NEW RULE: WIDE/SQUARE IMAGES SPAN FEWER ROWS */
+/* This is optional, but ensures wide images don't take up too much vertical space */
+.masonry img:not(.vertical) {
+    grid-row: span 30; /* Adjust this number (e.g., 30) until your wide images look right */
+}
+
 /* CONTACT FORM */
 .form-wrapper {
   padding: 4rem 2.5rem 8rem;
@@ -240,6 +251,7 @@ button:hover {
     height: 280px;
   }
 }
+
 
 
 
