@@ -128,34 +128,23 @@ nav a:hover {
 }
 
 .masonry {
-  column-count: 1; /* JS will override this dynamically */
-  column-gap: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
   max-width: 1200px;
   margin: auto;
 }
 
 .masonry img {
   width: 100%;
-  margin-bottom: 1.5rem;
-  border-radius: 3px;
+  height: auto; /* keeps vertical images fully visible */
   display: block;
-  transition: opacity 0.25s ease;
+  border-radius: 3px;
+  transition: opacity .25s ease;
 }
 
 .masonry img:hover {
-  opacity: .8;
-}
-
-@media (min-width: 600px) {
-  .masonry {
-    column-count: 2;
-  }
-}
-
-@media (min-width: 900px) {
-  .masonry {
-    column-count: 3;
-  }
+  opacity: 0.8;
 }
 
 /* CONTACT FORM */
@@ -245,6 +234,7 @@ button:hover {
     height: 280px;
   }
 }
+
 
 
 
