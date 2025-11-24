@@ -123,10 +123,6 @@ nav a:hover {
 }
 
 /* GALLERY — MASONRY */
-.gallery-section {
-  padding: 3rem 2.5rem 6rem;
-}
-
 .masonry {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -234,6 +230,7 @@ button:hover {
     height: 280px;
   }
 }
+
 
 
 
