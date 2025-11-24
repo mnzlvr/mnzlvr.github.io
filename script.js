@@ -1,13 +1,9 @@
-window.addEventListener('load', () => {
-  const masonry = document.querySelector('.masonry');
-  const rowHeight = parseFloat(window.getComputedStyle(masonry).getPropertyValue('grid-auto-rows'));
-  const rowGap = parseFloat(window.getComputedStyle(masonry).getPropertyValue('gap'));
-
-  document.querySelectorAll('.masonry-item').forEach(item => {
-    const img = item.querySelector('img');
-    const h = img.getBoundingClientRect().height;
-
-    const span = Math.ceil((h + rowGap) / (rowHeight + rowGap));
-    item.style.gridRowEnd = `span ${span}`;
+// Intersection Observer for fade-in effect (applies only if .section exists)
+const sections = document.querySelectorAll('.section');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('visible');
   });
-});
+}, { threshold: 0.1 });
+
+sections.forEach(sec => observer.observe(sec));
