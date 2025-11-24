@@ -129,7 +129,7 @@ nav a:hover {
 
 .masonry {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 1.5rem;
   max-width: 1200px;
   margin: auto;
@@ -137,16 +137,15 @@ nav a:hover {
 
 .masonry img {
   width: 100%;
-  height: auto;      /* ensures no cropping, vertical images show fully */
-  border-radius: 3px;
+  height: auto; /* keeps vertical images fully visible */
   display: block;
+  border-radius: 3px;
   transition: opacity .25s ease;
 }
 
 .masonry img:hover {
   opacity: 0.8;
 }
-
 
 /* CONTACT FORM */
 .form-wrapper {
@@ -235,6 +234,7 @@ button:hover {
     height: 280px;
   }
 }
+
 
 
 
