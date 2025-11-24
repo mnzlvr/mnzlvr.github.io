@@ -43,5 +43,22 @@
     © 2025 Oliver Muñoz | All Rights Reserved
   </footer>
 
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const masonry = document.querySelector('.masonry');
+    const items = Array.from(masonry.children);
+
+    masonry.innerHTML = "";
+
+    function renderMasonry() {
+      masonry.innerHTML = "";
+      items.forEach(img => masonry.appendChild(img));
+    }
+
+    renderMasonry();
+  });
+  </script>
+
+    
 </body>
 </html>
