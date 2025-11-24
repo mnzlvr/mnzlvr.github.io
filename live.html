@@ -44,20 +44,33 @@
   </footer>
 
   <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const masonry = document.querySelector('.masonry');
-    const items = Array.from(masonry.children);
+  document.addEventListener("DOMContentLoaded", function () {
+  const grid = document.querySelector(".masonry");
+  const items = Array.from(grid.children);
 
-    masonry.innerHTML = "";
+  function resizeMasonry() {
+    const columnCount = getComputedStyle(grid).columnCount;
+    if (!columnCount) return;
 
-    function renderMasonry() {
-      masonry.innerHTML = "";
-      items.forEach(img => masonry.appendChild(img));
-    }
+    // Reset order
+    items.forEach(img => img.style.order = "");
 
-    renderMasonry();
+    // Create array of column heights
+    const colHeights = Array.from({ length: columnCount }, () => 0);
+
+    // Assign items to columns in strict order
+    items.forEach(img => {
+      const smallestCol = colHeights.indexOf(Math.min(...colHeights));
+      img.style.order = smallestCol;
+      colHeights[smallestCol] += img.scrollHeight;
+    });
+  }
+
+  window.addEventListener("load", resizeMasonry);
+  window.addEventListener("resize", resizeMasonry);
   });
   </script>
+
 
     
 </body>
