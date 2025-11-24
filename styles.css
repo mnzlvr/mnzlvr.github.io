@@ -123,28 +123,37 @@ nav a:hover {
 }
 
 /* GALLERY — MASONRY */
-.gallery-section {
+.gallery-columns {
+  column-count: 3;       /* Number of vertical columns */
+  column-gap: 1.5rem;    /* Gap between columns */
+  max-width: 1200px;
+  margin: auto;
   padding: 3rem 2.5rem 6rem;
 }
 
-.masonry {
-  column-count: 3;
-  column-gap: 1.5rem;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.masonry img {
+.gallery-columns img {
   width: 100%;
-  margin-bottom: 1.5rem;
-  border-radius: 3px;
-  object-fit: cover;
-  transition: opacity .25s ease;
   display: block;
+  margin-bottom: 1.5rem;
+  /* Optional: smooth hover effect */
+  transition: transform 0.3s ease;
 }
 
-.masonry img:hover {
-  opacity: .8;
+.gallery-columns img:hover {
+  transform: scale(1.02);
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .gallery-columns {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery-columns {
+    column-count: 1;
+  }
 }
 
 /* CONTACT FORM */
@@ -234,6 +243,7 @@ button:hover {
     height: 280px;
   }
 }
+
 
 
 
