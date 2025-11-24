@@ -124,44 +124,27 @@ nav a:hover {
 
 /* GALLERY — MASONRY */
 .gallery-section {
-    padding: 3rem 2.5rem 6rem;
+  padding: 3rem 2.5rem 6rem;
 }
 
 .masonry {
-    display: grid;
-    /* Use 'auto-fill' with minmax to handle responsiveness */
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjusted min-width slightly */
-    grid-auto-rows: 10px; /* IMPORTANT: Defines the height unit for spanning */
-    gap: 1.5rem;
-    max-width: 1200px;
-    margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .masonry img {
-    width: 100%;
-    /* Remove 'height: auto;' and use 'grid-row' instead */
-    display: block;
-    border-radius: 3px;
-    transition: opacity .25s ease;
-    
-    /* NEW: This is the critical line to prevent gaps */
-    height: 100%;
-    object-fit: cover; /* Ensures images fill the cell without distortion */
+  width: 100%;
+  height: auto; /* keeps vertical images fully visible */
+  display: block;
+  border-radius: 3px;
+  transition: opacity .25s ease;
 }
 
 .masonry img:hover {
-    opacity: 0.8;
-}
-
-/* NEW RULE: TALL IMAGES SPAN MORE ROWS */
-.masonry .vertical {
-    grid-row: span 50; /* Adjust this number (e.g., 50) until your tall images look right */
-}
-
-/* NEW RULE: WIDE/SQUARE IMAGES SPAN FEWER ROWS */
-/* This is optional, but ensures wide images don't take up too much vertical space */
-.masonry img:not(.vertical) {
-    grid-row: span 30; /* Adjust this number (e.g., 30) until your wide images look right */
+  opacity: 0.8;
 }
 
 /* CONTACT FORM */
@@ -251,6 +234,7 @@ button:hover {
     height: 280px;
   }
 }
+
 
 
 
