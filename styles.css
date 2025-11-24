@@ -129,16 +129,17 @@ nav a:hover {
 
 .masonry {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Auto resize columns based on available space */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Auto resize columns */
   gap: 1.5rem; /* Space between items */
   max-width: 1200px;
   margin: auto;
+  grid-auto-rows: minmax(200px, auto); /* Fixes vertical image sizing */
 }
 
 .masonry img {
-  width: 100%; /* Make sure images always stretch to fit their grid column */
-  height: auto; /* Keep images proportional */
-  object-fit: cover; /* Ensure images maintain their aspect ratio without stretching */
+  width: 100%; /* Ensure images always fill their grid column */
+  height: auto; /* Maintain proportional height */
+  object-fit: cover; /* Ensure images maintain aspect ratio */
   border-radius: 3px;
   transition: opacity 0.25s ease;
   display: block;
@@ -236,6 +237,7 @@ button:hover {
     height: 280px;
   }
 }
+
 
 
 
