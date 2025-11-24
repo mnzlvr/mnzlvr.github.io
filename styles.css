@@ -133,14 +133,13 @@ nav a:hover {
   gap: 1.5rem; /* Space between items */
   max-width: 1200px;
   margin: auto;
-  grid-auto-rows: minmax(200px, auto); /* Fixes vertical image sizing */
+  grid-auto-rows: 200px; /* Set a minimum height for each image */
 }
 
 .masonry img {
   width: 100%; /* Ensure images always fill their grid column */
-  height: auto; /* Maintain proportional height */
-  max-height: 400px;
-  object-fit: cover; /* Ensure images maintain aspect ratio */
+  height: 100%; /* Maintain consistent size */
+  object-fit: cover; /* Ensure images maintain aspect ratio and fill grid cell */
   border-radius: 3px;
   transition: opacity 0.25s ease;
   display: block;
@@ -237,6 +236,7 @@ button:hover {
     height: 280px;
   }
 }
+
 
 
 
