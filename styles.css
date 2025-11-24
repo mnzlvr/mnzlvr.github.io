@@ -122,26 +122,31 @@ nav a:hover {
   margin: 1.2rem auto 0;
 }
 
-/* GALLERY — CLEAN GRID (no cropping, no span) */
+/* GALLERY — MASONRY */
 .gallery-section {
   padding: 3rem 2.5rem 6rem;
 }
 
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* responsive columns */
-  gap: 1.5rem;
+.masonry {
+  column-count: 3;
+  column-gap: 1.5rem;
   max-width: 1200px;
   margin: auto;
 }
 
-.gallery-grid img {
+.masonry img {
   width: 100%;
-  height: auto;         /* important: don't force height */
-  object-fit: contain;  /* ensures full image is visible — no cropping */
+  margin-bottom: 1.5rem;
   border-radius: 3px;
+  object-fit: cover;
+  transition: opacity .25s ease;
   display: block;
 }
+
+.masonry img:hover {
+  opacity: .8;
+}
+
 /* CONTACT FORM */
 .form-wrapper {
   padding: 4rem 2.5rem 8rem;
@@ -229,6 +234,7 @@ button:hover {
     height: 280px;
   }
 }
+
 
 
 
