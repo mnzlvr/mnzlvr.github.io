@@ -139,6 +139,7 @@ nav a:hover {
 .masonry img {
   width: 100%; /* Ensure images always fill their grid column */
   height: auto; /* Maintain proportional height */
+  max-height: 400px;
   object-fit: cover; /* Ensure images maintain aspect ratio */
   border-radius: 3px;
   transition: opacity 0.25s ease;
@@ -146,8 +147,7 @@ nav a:hover {
 }
 
 .masonry img:hover {
-  opacity: 0.7; /* Slightly dim the image on hover */
-  transform: scale(1.03); /* Slight zoom effect */
+  opacity: 0.8;
 }
 
 /* CONTACT FORM */
@@ -237,6 +237,7 @@ button:hover {
     height: 280px;
   }
 }
+
 
 
 
