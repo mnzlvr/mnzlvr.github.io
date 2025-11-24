@@ -42,36 +42,6 @@
   <footer class="footer">
     © 2025 Oliver Muñoz | All Rights Reserved
   </footer>
-
-  <script>
-  document.addEventListener("DOMContentLoaded", function () {
-  const grid = document.querySelector(".masonry");
-  const items = Array.from(grid.children);
-
-  function resizeMasonry() {
-    const columnCount = getComputedStyle(grid).columnCount;
-    if (!columnCount) return;
-
-    // Reset order
-    items.forEach(img => img.style.order = "");
-
-    // Create array of column heights
-    const colHeights = Array.from({ length: columnCount }, () => 0);
-
-    // Assign items to columns in strict order
-    items.forEach(img => {
-      const smallestCol = colHeights.indexOf(Math.min(...colHeights));
-      img.style.order = smallestCol;
-      colHeights[smallestCol] += img.scrollHeight;
-    });
-  }
-
-  window.addEventListener("load", resizeMasonry);
-  window.addEventListener("resize", resizeMasonry);
-  });
-  </script>
-
-
     
 </body>
 </html>
