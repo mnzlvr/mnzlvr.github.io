@@ -122,14 +122,14 @@ nav a:hover {
   margin: 1.2rem auto 0;
 }
 
-/* GALLERY — MASONRY */
+/* GALLERY — CLEAN GRID (no cropping, no span) */
 .gallery-section {
   padding: 3rem 2.5rem 6rem;
 }
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* responsive columns */
   gap: 1.5rem;
   max-width: 1200px;
   margin: auto;
@@ -137,11 +137,11 @@ nav a:hover {
 
 .gallery-grid img {
   width: 100%;
-  height: auto;        /* ← VERY IMPORTANT — this avoids ALL cropping */
-  display: block;
+  height: auto;         /* important: don't force height */
+  object-fit: contain;  /* ensures full image is visible — no cropping */
   border-radius: 3px;
+  display: block;
 }
-
 /* CONTACT FORM */
 .form-wrapper {
   padding: 4rem 2.5rem 8rem;
@@ -229,6 +229,7 @@ button:hover {
     height: 280px;
   }
 }
+
 
 
 
