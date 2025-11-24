@@ -123,37 +123,28 @@ nav a:hover {
 }
 
 /* GALLERY — MASONRY */
-.gallery-columns {
-  column-count: 3;       /* Number of vertical columns */
-  column-gap: 1.5rem;    /* Gap between columns */
-  max-width: 1200px;
-  margin: auto;
+.gallery-section {
   padding: 3rem 2.5rem 6rem;
 }
 
-.gallery-columns img {
+.masonry {
+  column-count: 3;
+  column-gap: 1.5rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.masonry img {
   width: 100%;
-  display: block;
   margin-bottom: 1.5rem;
-  /* Optional: smooth hover effect */
-  transition: transform 0.3s ease;
+  border-radius: 3px;
+  object-fit: cover;
+  transition: opacity .25s ease;
+  display: block;
 }
 
-.gallery-columns img:hover {
-  transform: scale(1.02);
-}
-
-/* Responsive adjustments */
-@media (max-width: 900px) {
-  .gallery-columns {
-    column-count: 2;
-  }
-}
-
-@media (max-width: 600px) {
-  .gallery-columns {
-    column-count: 1;
-  }
+.masonry img:hover {
+  opacity: .8;
 }
 
 /* CONTACT FORM */
@@ -243,6 +234,7 @@ button:hover {
     height: 280px;
   }
 }
+
 
 
 
