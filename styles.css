@@ -127,17 +127,9 @@ nav a:hover {
   padding: 3rem 2.5rem 6rem;
 }
 
-.container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 1rem;
-}
-
-.container div img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 3px;
+.container{
+  padding: 1rem;
+  column-count: 4;
 }
 
 img{
@@ -250,6 +242,7 @@ button:hover {
     height: 280px;
   }
 }
+
 
 
 
