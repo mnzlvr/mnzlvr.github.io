@@ -135,7 +135,6 @@ nav a:hover {
 
 img{
   width: 100%;
-  display: block;
   margin-bottom: 0.5rem;    
 }
 
@@ -244,6 +243,7 @@ button:hover {
     height: 280px;
   }
 }
+
 
 
 
