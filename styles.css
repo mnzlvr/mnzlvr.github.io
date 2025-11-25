@@ -132,6 +132,12 @@ nav a:hover {
   column-count: 4;
 }
 
+.container .row {
+  display: flex;
+  gap: 1rem;
+  break-inside: avoid;
+}
+
 img{
   width: 100%;
   margin-bottom: 1rem;    
@@ -242,6 +248,7 @@ button:hover {
     height: 280px;
   }
 }
+
 
 
 
