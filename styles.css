@@ -123,6 +123,10 @@ nav a:hover {
 }
 
 /* GALLERY — MASONRY */
+.gallery-section {
+  padding: 3rem 2.5rem 6rem;
+}
+
 .container{
   padding: 1rem;
   column-count: 4;
@@ -238,6 +242,7 @@ button:hover {
     height: 280px;
   }
 }
+
 
 
 
