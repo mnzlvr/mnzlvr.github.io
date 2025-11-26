@@ -139,6 +139,10 @@ img{
   margin-bottom: 0.3rem;    
 }
 
+img:hover {
+  opacity: 0.8;
+}
+
 @media only screen and (max-width: 1000px){
   .container{
     column-count: 3;
@@ -244,6 +248,7 @@ button:hover {
     height: 280px;
   }
 }
+
 
 
 
