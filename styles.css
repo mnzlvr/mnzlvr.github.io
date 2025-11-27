@@ -175,6 +175,7 @@ img:hover {
 .contact-intro a {
   color: inherit;        /* makes link same color as parent text (#444) */
   text-decoration: none; /* removes underline */
+  font-weight: 600;
 }
 
 .contact-intro a:hover {
@@ -273,6 +274,7 @@ img:hover {
     height: 280px;
   }
 }
+
 
 
 
