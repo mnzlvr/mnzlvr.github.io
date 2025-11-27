@@ -222,26 +222,6 @@ img:hover {
   opacity: 0.85;
 }
 
-/* EMAIL BUTTON */
-.email-button {
-  display: inline-block;
-  padding: 0.9rem 1.8rem;
-  background-color: #000; /* You can swap for your brand color */
-  color: #fff;
-  border-radius: 999px;  /* FULLY rounded pill button */
-  text-decoration: none;
-  font-size: 1rem;
-  letter-spacing: 0.5px;
-  transition: all 0.25s ease;
-  border: 1px solid transparent;
-}
-
-.email-button:hover {
-  background-color: transparent;
-  color: #000;
-  border-color: #000;
-}
-
 /* FOOTER */
 .footer {
   width: 100%;
@@ -284,6 +264,7 @@ img:hover {
     height: 280px;
   }
 }
+
 
 
 
