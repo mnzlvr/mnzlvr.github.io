@@ -172,6 +172,15 @@ img:hover {
   color: #444;
 }
 
+.contact-intro a {
+  color: inherit;        /* makes link same color as parent text (#444) */
+  text-decoration: none; /* removes underline */
+}
+
+.contact-intro a:hover {
+  text-decoration: underline; /* optional: subtle hover underline */
+}
+
 .form-wrapper {
   max-width: 650px;
   margin: 0 auto;
@@ -264,6 +273,7 @@ img:hover {
     height: 280px;
   }
 }
+
 
 
 
