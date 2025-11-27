@@ -6,10 +6,10 @@
   <title>Contact — Oliver Muñoz</title>
 
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon.png">
-
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
   <header>
@@ -27,18 +27,23 @@
   <section class="section visible">
     <h1 class="page-title">Contact</h1>
 
+    <div class="contact-intro">
+      <p>For bookings, collaborations, or any inquiries, feel free to send me a message below.</p>
+    </div>
+
     <div class="form-wrapper">
-      <form class="contact-form">
-        <label>Name</label>
-        <input type="text" placeholder="Your name">
+      <form class="contact-form" action="https://formspree.io/f/meobajwp" method="POST">
 
-        <label>Email</label>
-        <input type="email" placeholder="Your email">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" placeholder="Your name" required>
 
-        <label>Message</label>
-        <textarea rows="6" placeholder="Your request"></textarea>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="Your email" required>
 
-        <button type="submit" disabled>Send (coming soon)</button>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" placeholder="Your message" required></textarea>
+
+        <button type="submit">Send Message</button>
       </form>
     </div>
   </section>
