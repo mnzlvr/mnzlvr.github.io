@@ -56,26 +56,6 @@ nav a:hover {
   opacity: 0.5;
 }
 
-/* NAV ICONS */
-.nav-icons img {
-  width: 17px;          /* smaller icons */
-  height: 17px;
-  object-fit: contain;
-  opacity: 0.8;         /* matches text tone */
-  transform: translateY(1px);  /* aligns vertically with text */
-  transition: opacity 0.2s;
-}
-
-.nav-icons img:hover {
-  opacity: 0.5;
-}
-
-.nav-icons {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-}
-
 /* HERO */
 .hero {
   min-height: 25vh;   /* smaller and more elegant */
@@ -363,6 +343,7 @@ img:hover {
   align-items: center;
   gap: 2rem;
 }
+
 
 
 
