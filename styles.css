@@ -126,13 +126,13 @@ nav a:hover {
   font-weight: 300;
 }
 
-.page-title::after {
+.page-header::after {
   content: "";
   display: block;
   width: 60px;
   height: 1px;
   background: #ddd;
-  margin: 1.2rem auto 0;
+  margin: 1.5rem auto 0; /* space above the line */
 }
 
 /* GALLERY — MASONRY */
@@ -336,6 +336,7 @@ img:hover {
     height: 280px;
   }
 }
+
 
 
 
