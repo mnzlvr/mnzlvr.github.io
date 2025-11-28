@@ -183,8 +183,10 @@ img:hover {
 #lightbox img {
   max-width: 90vw;
   max-height: 90vh;
+  width: auto;
+  height: auto;
+  object-fit: contain; /* preserves original aspect ratio */
   border-radius: 8px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.2);
 }
 
 #lightbox.active {
@@ -309,6 +311,7 @@ img:hover {
     height: 280px;
   }
 }
+
 
 
 
