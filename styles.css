@@ -144,6 +144,12 @@ img:hover {
   opacity: 0.8;
 }
 
+/* FIX: prevent hover transparency on LIGHTBOX image */
+#lightbox img:hover {
+  opacity: 1 !important;
+  filter: none !important;
+}
+
 @media only screen and (max-width: 1000px){
   .container{
     column-count: 3;
@@ -311,6 +317,7 @@ img:hover {
     height: 280px;
   }
 }
+
 
 
 
