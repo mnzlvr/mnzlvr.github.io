@@ -168,20 +168,20 @@ img:hover {
   }
 }
 
-/* LIGHTBOX — OPTION 2 (Minimal Fade + Dark Background) */
+/* LIGHTBOX — OPTION 3 (Subtle Zoom Animation) */
 #lightbox {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.92); /* slightly darker */
+  background: rgba(0, 0, 0, 0.90);
   display: flex;
   justify-content: center;
   align-items: center;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.35s ease; /* smoother fade */
+  transition: opacity 0.3s ease;
   z-index: 9999;
 }
 
@@ -190,8 +190,11 @@ img:hover {
   max-height: 90vh;
   object-fit: contain;
   border-radius: 6px;
-  opacity: 0;                /* start invisible */
-  transition: opacity 0.35s ease; 
+  transform: scale(0.97);      /* start slightly smaller */
+  opacity: 0;
+  transition: 
+    opacity 0.3s ease,
+    transform 0.35s ease;      /* smooth zoom */
 }
 
 #lightbox.active {
@@ -200,7 +203,8 @@ img:hover {
 }
 
 #lightbox.active img {
-  opacity: 1;                /* fade-in */
+  opacity: 1;
+  transform: scale(1);         /* zoom to full size */
 }
 
 /* HOVER CURSOR */
@@ -320,6 +324,7 @@ img:hover {
     height: 280px;
   }
 }
+
 
 
 
