@@ -168,36 +168,39 @@ img:hover {
   }
 }
 
-/* LIGHTBOX */
+/* LIGHTBOX — OPTION 2 (Minimal Fade + Dark Background) */
 #lightbox {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(0, 0, 0, 0.92); /* slightly darker */
   display: flex;
   justify-content: center;
   align-items: center;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.25s ease;
-  backdrop-filter: blur(3px);
+  transition: opacity 0.35s ease; /* smoother fade */
   z-index: 9999;
 }
 
 #lightbox img {
   max-width: 90vw;
   max-height: 90vh;
-  width: auto;
-  height: auto;
-  object-fit: contain; /* preserves original aspect ratio */
-  border-radius: 8px;
+  object-fit: contain;
+  border-radius: 6px;
+  opacity: 0;                /* start invisible */
+  transition: opacity 0.35s ease; 
 }
 
 #lightbox.active {
   opacity: 1;
   pointer-events: auto;
+}
+
+#lightbox.active img {
+  opacity: 1;                /* fade-in */
 }
 
 /* HOVER CURSOR */
@@ -317,6 +320,7 @@ img:hover {
     height: 280px;
   }
 }
+
 
 
 
