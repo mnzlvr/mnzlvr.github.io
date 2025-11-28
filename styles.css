@@ -337,13 +337,6 @@ img:hover {
   }
 }
 
-/* NAV RIGHT CONTAINER — keeps nav menu + icons together */
-.nav-right {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-}
-
 
 
 
