@@ -224,6 +224,52 @@ img:hover {
   cursor: zoom-in;
 }
 
+/* ABOUT PAGE */
+.about-container {
+  max-width: 900px;
+  margin: 10rem auto 6rem;
+  padding: 0 2rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 3rem;
+}
+
+.about-image img {
+  width: 260px;
+  height: auto;
+  border-radius: 4px;
+  object-fit: cover;
+  opacity: 0.95;
+}
+
+.about-text h1 {
+  font-size: 2.4rem;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  margin-bottom: 1.8rem;
+}
+
+.about-text p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 1.4rem;
+  font-weight: 300;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image img {
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+
 /* CONTACT PAGE */
 .contact-intro {
   max-width: 650px;
@@ -336,6 +382,7 @@ img:hover {
     height: 280px;
   }
 }
+
 
 
 
