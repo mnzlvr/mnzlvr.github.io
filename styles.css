@@ -146,10 +146,10 @@ nav a:hover {
   column-gap: 0.3rem;
 }
 
-img{
+.container img {
   width: 100%;
   display: block;
-  margin-bottom: 0.3rem;    
+  margin-bottom: 0.3rem;
 }
 
 img:hover {
@@ -227,7 +227,7 @@ img:hover {
 /* ABOUT PAGE */
 .about-container {
   max-width: 900px;
-  margin: 10rem auto 6rem;
+  margin: 8rem auto 6rem;
   padding: 0 2rem;
   display: flex;
   align-items: flex-start;
@@ -382,6 +382,7 @@ img:hover {
     height: 280px;
   }
 }
+
 
 
 
