@@ -15,6 +15,7 @@ body {
   background: #ffffff;
   line-height: 1.55;
   font-weight: 300;
+  padding-top: 76px;
 }
 
 /* HEADER */
@@ -102,37 +103,40 @@ nav a:hover {
   text-align: left;
 }
 
-/* PAGE TITLES */
+/* PAGE HEADER/TITLES (shared across Live / Film / About / Contact) */
+.page-header {
+  text-align: center;
+  margin-top: 0;           /* controlled by body padding-top instead */
+  margin-bottom: 2.25rem;
+}
+
 .page-title {
-  margin-bottom: 0.5rem;
-  padding: 0 2.5rem;
   font-size: 2.8rem;
   font-weight: 300;
   letter-spacing: 0.05em;
-  opacity: 0.9;
+  margin: 0 0 0.6rem 0;
+  opacity: 0.95;
   text-align: center;
-}
-
-.page-header {
-  text-align: center;
-  margin-top: 8rem;
-  margin-bottom: 3rem;
 }
 
 .page-subtitle {
   font-size: 1rem;
   color: #555;
-  margin-top: 0.8rem;
+  margin: 0;
   font-weight: 300;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+/* small line under header (same position as Live/Film) */
 .page-header::after {
   content: "";
   display: block;
   width: 60px;
   height: 1px;
   background: #ddd;
-  margin: 1.5rem auto 0; /* space above the line */
+  margin: 1.2rem auto 0;
 }
 
 /* GALLERY — MASONRY */
@@ -224,70 +228,59 @@ nav a:hover {
   cursor: zoom-in;
 }
 
-/* ABOUT PAGE */
+/* ABOUT PAGE — image on top, text centered, matches site typography */
 .about-section {
-  /* ensure section spacing below fixed header */
-  padding-top: 4.5rem;
+  padding: 2rem 1rem 4rem;  /* spacing around the section */
 }
 
 .about-container {
   max-width: 900px;
-  margin: 6.5rem auto 6rem; /* top margin accounts for fixed header */
-  padding: 0 2rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
   display: flex;
-  align-items: flex-start;
-  gap: 3rem;
+  flex-direction: column;   /* image on top, text below */
+  gap: 1.25rem;
+  align-items: center;      /* center portrait and text */
   box-sizing: border-box;
 }
 
-/* Portrait / photo */
 .about-image img {
-  width: 320px;       /* desktop size for portrait */
-  max-width: 100%;    /* never overflow small screens */
+  width: 320px;       /* portrait size on desktop */
+  max-width: 100%;
   height: auto;
   border-radius: 6px;
   object-fit: cover;
   display: block;
-  opacity: 1;
 }
 
-/* Text column */
 .about-text {
-  flex: 1;            /* take remaining width */
-  max-width: 560px;
+  text-align: center; /* center paragraph text as requested */
+  max-width: 760px;
 }
 
 .about-text h1 {
   font-size: 2.4rem;
   font-weight: 300;
   letter-spacing: 0.04em;
-  margin: 0 0 1.2rem 0;
+  margin: 0 0 0.5rem 0;
 }
 
 .about-text p {
   font-size: 1rem;
   line-height: 1.7;
   color: #333;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1rem;
   font-weight: 300;
 }
 
-/* Small screens: stack and center */
+/* responsive: keep portrait smaller and centered */
 @media (max-width: 800px) {
-  .about-container {
-    flex-direction: column;
-    text-align: center;
-    margin-top: 5.5rem;
-    gap: 1.25rem;
-  }
-
   .about-image img {
     width: 60%;
-    margin: 0 auto;
   }
 
-  .about-text {
-    max-width: 680px;
+  .about-text h1 {
+    font-size: 1.9rem;
   }
 }
 
@@ -403,64 +396,6 @@ nav a:hover {
     height: 280px;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
