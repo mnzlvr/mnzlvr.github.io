@@ -354,76 +354,72 @@ nav a:hover {
   opacity: 0.85;
 }
 
-/* FOOTER */
-.footer {
+/* FOOTER + SOCIAL MEDIA ICONS grouped wrapper (keeps spacing balanced) */
+.footer-wrap {
   width: 100%;
   text-align: center;
-  padding: 2rem 0 0.8rem 0; /* smaller space under the text */
-  margin-top: 3rem;
-  font-size: 0.9rem;
-  letter-spacing: 0.02em;
-  opacity: 0.7;
+  box-sizing: border-box;
+
+  /* This controls the space above the footer text AND the same space under the icons */
+  padding-top: 2rem;    /* space above footer text */
+  padding-bottom: 2rem; /* same space under icons */
+}
+
+/* Footer text */
+.footer-wrap .footer {
+  font-size: 0.95rem;
+  color: #666;
+  opacity: 0.9;
   border-top: 1px solid #eee;
+  padding: 1rem 0 0; /* small interior padding above the text */
+  margin: 0;         /* remove extra margins */
 }
 
-/* RESPONSIVE */
-@media (max-width: 1000px) {
-  .masonry {
-    column-count: 2;
-  }
+/* Social icons row right below the footer text */
+.footer-wrap .social-icons {
+  margin: .35rem auto 0;   /* small gap between footer text and icons */
+  display: inline-flex;
+  gap: 0.35rem;            /* VERY small gap between icons (controls icon spacing) */
+  align-items: center;
+  justify-content: center;
 }
 
-@media (max-width: 800px) {
-  .home-previews {
-    flex-direction: column;
-  }
-
-  .preview-box img {
-    height: 350px;
-  }
+/* Icon size & look */
+.footer-wrap .social-icons img {
+  width: 28px;             /* icon size - tweak if you want slightly bigger/smaller */
+  height: 28px;
+  display: inline-block;
+  object-fit: contain;
+  border-radius: 6px;      /* keeps the rounded look if your PNG has a border */
+  background: transparent;
+  opacity: 0.85;
+  transition: transform .12s ease, opacity .12s ease;
+  margin: 0;               /* remove any extra per-image margin */
 }
 
-@media (max-width: 600px) {
-  nav ul {
-    gap: 1rem;
-  }
-
-  .masonry {
-    column-count: 1;
-  }
-
-  .preview-box img {
-    height: 280px;
-  }
-}
-
-/* SOCIAL MEDIA ICONS UNDER FOOTER */
-.social-icons {
-  width: 100%;
-  text-align: center;
-  margin-top: 0.8rem; /* SAME as icon gap! */
-  padding-bottom: 0; /* remove that big space */
-}
-
-.social-icons img {
-  width: 22px;
-  height: 22px;
-  opacity: 0.65;
-  margin: 0 0.1rem;  /* reduced from 0.7rem → closer */
-  transition: opacity 0.2s ease;
-}
-
-.social-icons a,
-.social-icons a:visited,
-.social-icons a:hover,
-.social-icons a:active {
-  text-decoration: none !important;
-  margin: 0 0.8rem; /* same value → perfect visual harmony */
-}
-
-.social-icons img:hover {
+/* hover */
+.footer-wrap .social-icons a:hover img {
+  transform: translateY(-2px);
   opacity: 1;
 }
+
+/* Optional: keep icons perfectly centered on small screens too */
+@media (max-width: 480px) {
+  .footer-wrap {
+    padding-top: 1.6rem;
+    padding-bottom: 1.6rem;
+  }
+
+  .footer-wrap .social-icons img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .footer-wrap .social-icons {
+    gap: 0.25rem;
+  }
+}
+
 
 
 
