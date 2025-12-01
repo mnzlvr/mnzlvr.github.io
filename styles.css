@@ -358,7 +358,7 @@ nav a:hover {
 .footer {
   width: 100%;
   text-align: center;
-  padding: 2rem 0;
+  padding: 2rem 0 0.8rem 0; /* smaller space under the text */
   margin-top: 3rem;
   font-size: 0.9rem;
   letter-spacing: 0.02em;
@@ -401,8 +401,8 @@ nav a:hover {
 .social-icons {
   width: 100%;
   text-align: center;
-  margin-top: 0.3rem;
-  padding-bottom: 2rem;
+  margin-top: 0.8rem; /* SAME as icon gap! */
+  padding-bottom: 0; /* remove that big space */
 }
 
 .social-icons img {
@@ -418,11 +418,13 @@ nav a:hover {
 .social-icons a:hover,
 .social-icons a:active {
   text-decoration: none !important;
+  margin: 0 0.8rem; /* same value → perfect visual harmony */
 }
 
 .social-icons img:hover {
   opacity: 1;
 }
+
 
 
 
