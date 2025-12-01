@@ -413,9 +413,14 @@ nav a:hover {
   transition: opacity 0.2s ease;
 }
 
+.social-icons a {
+  text-decoration: none !important;
+}
+
 .social-icons img:hover {
   opacity: 1;
 }
+
 
 
 
