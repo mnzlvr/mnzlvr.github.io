@@ -489,6 +489,81 @@ nav a:hover {
   }
 }
 
+@media (max-width: 800px) {
+
+  /* ----------------------------------- */
+  /*     GENERAL MOBILE TEXT SPACING     */
+  /* ----------------------------------- */
+  body, p {
+    padding: 0 1.2rem;
+    line-height: 1.55;
+    font-size: 1.02rem;
+  }
+
+  /* Prevents body padding from affecting header or full-width elements */
+  header,
+  .masonry,
+  .footer,
+  .social-icons {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* ----------------------------------- */
+  /*     ABOUT PAGE — CENTER THE IMAGE    */
+  /* ----------------------------------- */
+  .about-photo img,
+  .about-section img,
+  .about img {
+    display: block;
+    margin: 0 auto;
+    width: 90% !important;
+    max-width: 350px;
+    border-radius: 12px; /* optional, remove if not wanted */
+  }
+
+  /* ----------------------------------- */
+  /*    LIVE + FILM PAGES TEXT SPACING   */
+  /* ----------------------------------- */
+  .live-text,
+  .film-text,
+  .project-description,
+  .project-text,
+  .series-text {
+    padding: 0 1.2rem;
+    margin-top: 1rem;
+  }
+
+  /* Ensures long text is readable */
+  .live-text p,
+  .film-text p,
+  .project-description p {
+    margin-bottom: 1rem;
+  }
+
+  /* ----------------------------------- */
+  /*       CONTACT FORM SPACING          */
+  /* ----------------------------------- */
+  form,
+  .contact-form,
+  #contact,
+  .contact-section {
+    padding: 0 1.2rem;
+  }
+
+  input,
+  textarea {
+    width: 100% !important;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+  }
+
+  textarea {
+    min-height: 160px;
+  }
+}
+
+
 
 
 
