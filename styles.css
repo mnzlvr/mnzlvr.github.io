@@ -441,7 +441,7 @@ nav a:hover {
   border-top: 1px solid #eee;
   padding: 1rem 0;
   position: absolute;
-  top: 65px;   /* Adjusted slightly for better alignment */
+  top: 65px;   /* below the header */
   left: 0;
   z-index: 999;
 }
@@ -458,8 +458,10 @@ nav a:hover {
   opacity: 0.6;
 }
 
-/* -------- MOBILE SETTINGS (max-width: 800px) -------- */
+
+/* -------- MOBILE STYLING (max-width: 800px) -------- */
 @media (max-width: 800px) {
+
   /* Hide desktop nav, show hamburger */
   nav ul {
     display: none !important;
@@ -467,8 +469,8 @@ nav a:hover {
 
   .mobile-menu-icon {
     display: block;
-    margin-right: 0;
-    padding-right: 0.3rem; /* aligns better with logo */
+    margin-left: auto;         /* pushes hamburger to the right */
+    margin-right: 1.2rem;      /* same horizontal padding as logo */
   }
 
   /* Header layout */
@@ -476,31 +478,41 @@ nav a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.8rem 1.2rem; /* slightly taller header */
-    height: auto;
+    padding: 0.8rem 1.2rem;
+    position: fixed;     /* fixes content being hidden */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    z-index: 1000;
+    border-bottom: 1px solid #eee;
+  }
+
+  /* The rest of the page should start BELOW the header */
+  body {
+    padding-top: 90px; /* adjust this if header size changes */
   }
 
   /* Logo alignment */
   .logo {
     margin-left: 0;
-    font-size: 1.3rem; /* optional: slightly larger for readability */
+    font-size: 1.3rem;
     font-weight: 500;
     letter-spacing: 0.04em;
   }
-}
 
-@media (max-width: 800px) {
 
   /* ----------------------------------- */
-  /*     GENERAL MOBILE TEXT SPACING     */
+  /*       GENERAL MOBILE SPACING        */
   /* ----------------------------------- */
   body, p {
-    padding: 0 1.2rem;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
     line-height: 1.55;
     font-size: 1.02rem;
   }
 
-  /* Prevents body padding from affecting header or full-width elements */
+  /* Ensure full-width elements ignore padding */
   header,
   .masonry,
   .footer,
@@ -509,46 +521,49 @@ nav a:hover {
     padding-right: 0;
   }
 
+
   /* ----------------------------------- */
-  /*     ABOUT PAGE — CENTER THE IMAGE    */
+  /*     ABOUT PAGE — CENTER THE IMAGE   */
   /* ----------------------------------- */
-  .about-photo img,
-  .about-section img,
-  .about img {
+  .about-image img,
+  .about-section img {
     display: block;
     margin: 0 auto;
     width: 90% !important;
     max-width: 350px;
-    border-radius: 12px; /* optional, remove if not wanted */
+    border-radius: 10px;
   }
 
+
   /* ----------------------------------- */
-  /*    LIVE + FILM PAGES TEXT SPACING   */
+  /*     LIVE / FILM PAGE TEXT SPACING   */
   /* ----------------------------------- */
   .live-text,
   .film-text,
   .project-description,
   .project-text,
   .series-text {
-    padding: 0 1.2rem;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
     margin-top: 1rem;
   }
 
-  /* Ensures long text is readable */
   .live-text p,
   .film-text p,
   .project-description p {
     margin-bottom: 1rem;
   }
 
+
   /* ----------------------------------- */
-  /*       CONTACT FORM SPACING          */
+  /*        CONTACT FORM SPACING         */
   /* ----------------------------------- */
   form,
   .contact-form,
   #contact,
   .contact-section {
-    padding: 0 1.2rem;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
   }
 
   input,
@@ -562,6 +577,7 @@ nav a:hover {
     min-height: 160px;
   }
 }
+
 
 
 
