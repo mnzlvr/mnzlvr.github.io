@@ -420,11 +420,51 @@ nav a:hover {
   }
 }
 
+/* -------- MOBILE MENU -------- */
 
+/* Hide hamburger on desktop */
+.mobile-menu-icon {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  user-select: none;
+}
 
+/* The mobile dropdown (hidden by default) */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  background: white;
+  border-top: 1px solid #eee;
+  padding: 1rem 0;
+  position: absolute;
+  top: 70px;   /* below header */
+  left: 0;
+  z-index: 999;
+}
 
+.mobile-menu a {
+  padding: 1rem 0;
+  text-decoration: none;
+  color: #333;
+  font-size: 1.2rem;
+  letter-spacing: 0.03em;
+}
 
+.mobile-menu a:hover {
+  opacity: 0.6;
+}
 
+/* Hide desktop nav on mobile, show hamburger */
+@media (max-width: 800px) {
+  nav ul {
+    display: none;
+  }
 
-
+  .mobile-menu-icon {
+    display: block;
+  }
+}
 
