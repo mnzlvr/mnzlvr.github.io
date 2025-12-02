@@ -85,5 +85,15 @@
   </div>
   </footer> 
 
+<script>
+  const mobileMenuButton = document.getElementById("mobileMenuButton");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  mobileMenuButton.addEventListener("click", () => {
+    mobileMenu.style.display =
+      mobileMenu.style.display === "flex" ? "none" : "flex";
+  });
+</script>
+  
 </body>
 </html>
