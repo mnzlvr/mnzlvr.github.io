@@ -457,14 +457,30 @@ nav a:hover {
   opacity: 0.6;
 }
 
-/* Hide desktop nav on mobile, show hamburger */
+/* -------- MOBILE SETTINGS (max-width: 800px) -------- */
 @media (max-width: 800px) {
+  /* Hide desktop nav, show hamburger */
   nav ul {
     display: none;
   }
 
   .mobile-menu-icon {
     display: block;
+    margin-right: 0; /* moved here */
+  }
+
+  /* Header layout */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.2rem;
+  }
+
+  /* Logo alignment */
+  .logo {
+    margin-left: 0;
   }
 }
+
 
