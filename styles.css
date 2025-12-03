@@ -435,21 +435,14 @@ nav a:hover {
 .mobile-menu {
   display: none;
   flex-direction: column;
-  
-  /* --- Changes to make it look nicer --- */
-  text-align: right; /* Aligns links to the right */
-  width: 70%;        /* Reduced from 100% */
-  right: 0;          /* Pins the menu to the right edge of the viewport */
-  left: auto;        /* Ensures it ignores the original 'left: 0' */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Adds a subtle shadow for a floating effect */
-  border-bottom-left-radius: 6px; /* Softens the top-left corner where it meets the header */
-  padding: 1rem 1.2rem; /* Added horizontal padding for spacing */
-  /* ------------------------------------ */
-  
+  text-align: center;
+  width: 100%;
   background: white;
   border-top: 1px solid #eee;
+  padding: 1rem 0;
   position: absolute;
-  top: 65px;   /* below the header (adjust if your header size changes) */
+  top: 65px;   /* below the header */
+  left: 0;
   z-index: 999;
 }
 
@@ -585,6 +578,7 @@ nav a:hover {
     min-height: 160px;
   }
 }
+
 
 
 
