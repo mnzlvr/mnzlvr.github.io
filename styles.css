@@ -678,6 +678,19 @@ body.homepage {
   }
 }
 
+/* 1. Ensure the arrow doesn't look like a blue link */
+a.scroll-down {
+  text-decoration: none;
+  color: white; /* Ensures it stays white */
+}
+
+/* 2. Offset the scroll landing so the header doesn't cover the images */
+#explore {
+  /* This creates invisible space above the target when scrolling */
+  scroll-margin-top: 100px; 
+}
+
+
 
 
 
