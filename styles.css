@@ -579,6 +579,104 @@ nav a:hover {
   }
 }
 
+/* =========================================
+   NEW MODERN HOMEPAGE STYLES
+   ========================================= */
+
+/* 1. Reset specific to the homepage body */
+body.homepage {
+  /* We remove the top padding here because the hero handles the spacing */
+  padding-top: 76px; 
+}
+
+/* 2. The New Hero Container */
+.hero-cinematic {
+  position: relative;
+  /* This calculates 100% of the screen height MINUS the header height (76px).
+     This makes the image fit perfectly without scrolling. */
+  height: calc(100vh - 76px); 
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-top: 0; /* Overrides previous hero margin */
+}
+
+/* 3. The Background Image */
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This crops the image to fill the screen nicely */
+  z-index: 1;
+}
+
+/* 4. The Overlay (adds a tint so white text is readable) */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* Adjust 0.3 to make it darker/lighter */
+  z-index: 2;
+}
+
+/* 5. The Content */
+.hero-content {
+  position: relative;
+  z-index: 3;
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: 3rem; 
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 0;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+/* 6. Mobile Responsiveness for the text */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 1.8rem; /* Smaller text on phones */
+    line-height: 1.3;
+  }
+}
+
+/* 7. The Bouncing Arrow */
+.scroll-down {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 2rem;
+  z-index: 3;
+  animation: bounce 2s infinite;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+/* Keyframes for the bounce animation */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  40% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+  60% {
+    transform: translateX(-50%) translateY(-5px);
+  }
+}
 
 
 
