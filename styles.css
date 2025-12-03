@@ -435,11 +435,11 @@ nav a:hover {
 .mobile-menu {
   display: none;
   flex-direction: column;
-  text-align: center;
+  text-align: right;
   width: 100%;
   background: white;
   border-top: 1px solid #eee;
-  padding: 1rem 0;
+  padding: 1rem 1.2rem;
   position: absolute;
   top: 65px;   /* below the header */
   left: 0;
@@ -578,6 +578,7 @@ nav a:hover {
     min-height: 160px;
   }
 }
+
 
 
 
