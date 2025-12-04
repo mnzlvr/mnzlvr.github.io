@@ -692,30 +692,3 @@ a.scroll-down {
   scroll-margin-top: 100px; 
 }
 
-/* --- NEW IMAGE PROTECTION STYLES --- */
-
-/* 1. Define the wrapper (.image-protector) */
-.image-protector {
-  position: relative; /* Allows overlay to be positioned absolutely inside */
-  display: block;
-  /* Add this to prevent accidental drag-and-drop saves */
-  -webkit-user-drag: none;
-  user-select: none;
-}
-
-/* 2. Position the transparent overlay (.overlay-protection) */
-.overlay-protection {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 5; /* Ensures the overlay is on top of the image */
-  background: transparent; /* Must remain transparent */
-}
-
-/* 3. Disable pointer events on the image itself */
-.image-protector img {
-    pointer-events: none;
-}
-
