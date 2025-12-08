@@ -510,8 +510,8 @@ nav a:hover {
   /*       GENERAL MOBILE SPACING        */
   /* ----------------------------------- */
   body, p {
-    padding-left: auto;
-    padding-right: auto;
+    padding-left: 0.1rem;
+    padding-right: 0.1rem;
     line-height: 1.55;
     font-size: 1.02rem;
   }
@@ -692,6 +692,7 @@ a.scroll-down {
   /* This creates invisible space above the target when scrolling */
   scroll-margin-top: 100px; 
 }
+
 
 
 
