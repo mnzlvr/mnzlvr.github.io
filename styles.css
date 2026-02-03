@@ -747,7 +747,7 @@ a.scroll-down {
 #close-btn {
   top: 15px;
   right: 15px;
-  font-size: 1.5rem; /* Match arrow size */
+  font-size: 2rem; /* Match arrow size */
   padding: 10px;
 }
 
@@ -766,6 +766,7 @@ a.scroll-down {
     right: 10px;
   }
 }
+
 
 
 
