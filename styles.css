@@ -693,6 +693,64 @@ a.scroll-down {
   scroll-margin-top: 100px; 
 }
 
+/* --- LIGHTBOX NAVIGATION STYLES --- */
+
+/* Navigation Buttons (Left/Right arrows) */
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: white;
+  font-size: 3rem;
+  padding: 0 1rem;
+  cursor: pointer;
+  z-index: 10001; /* Above the image */
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+  user-select: none;
+}
+
+.nav-btn:hover {
+  opacity: 1;
+}
+
+#prev-btn {
+  left: 10px;
+}
+
+#next-btn {
+  right: 10px;
+}
+
+/* Close Button (Top Right) */
+#close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10001;
+  line-height: 1;
+  opacity: 0.8;
+}
+
+#close-btn:hover {
+  opacity: 1;
+}
+
+/* Mobile adjustments for buttons */
+@media (max-width: 600px) {
+  .nav-btn {
+    font-size: 2rem;
+    padding: 1rem;
+  }
+  #prev-btn { left: 0; }
+  #next-btn { right: 0; }
+}
 
 
 
