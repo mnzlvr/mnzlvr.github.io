@@ -141,19 +141,82 @@
   <script>
     const lightbox = document.getElementById("lightbox");
     const lightboxImg = document.getElementById("lightbox-img");
+    const closeBtn = document.getElementById("close-btn");
+    const prevBtn = document.getElementById("prev-btn");
+    const nextBtn = document.getElementById("next-btn");
+  
+  // Create an array of all images in the gallery
+    const galleryImages = Array.from(document.querySelectorAll(".gallery img"));
+    let currentIndex = 0;
 
-    document.querySelectorAll(".gallery img").forEach(image => {
-      image.addEventListener("click", () => {
-        lightboxImg.src = image.src;
-        lightbox.classList.add("active");
-      });
-    });
+  // Function to open Lightbox
+  function openLightbox(index) {
+    currentIndex = index;
+    updateImage();
+    lightbox.classList.add("active");
+  }
 
-    lightbox.addEventListener("click", () => {
-      lightbox.classList.remove("active");
-      lightboxImg.src = "";
+  // Function to update the image source based on currentIndex
+  function updateImage() {
+    const image = galleryImages[currentIndex];
+    lightboxImg.src = image.src;
+    lightboxImg.alt = image.alt;
+  }
+
+  // Function: Go to Next Image
+  function showNext(e) {
+    if (e) e.stopPropagation(); // Prevent closing lightbox when clicking button
+    currentIndex++;
+    if (currentIndex >= galleryImages.length) {
+      currentIndex = 0; // Loop back to start
+    }
+    updateImage();
+  }
+
+  // Function: Go to Previous Image
+  function showPrev(e) {
+    if (e) e.stopPropagation(); 
+    currentIndex--;
+    if (currentIndex < 0) {
+      currentIndex = galleryImages.length - 1; // Loop to end
+    }
+    updateImage();
+  }
+
+  // Function: Close Lightbox
+  function closeLightbox() {
+    lightbox.classList.remove("active");
+    lightboxImg.src = "";
+  }
+
+  // Event Listeners for Gallery Images
+  galleryImages.forEach((image, index) => {
+    image.addEventListener("click", () => {
+      openLightbox(index);
     });
-  </script>
+  });
+
+  // Event Listeners for Buttons
+  if(nextBtn) nextBtn.addEventListener("click", showNext);
+  if(prevBtn) prevBtn.addEventListener("click", showPrev);
+  if(closeBtn) closeBtn.addEventListener("click", closeLightbox);
+
+  // Close when clicking outside the image (on the background)
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) {
+      closeLightbox();
+    }
+  });
+
+  // Keyboard Navigation
+  document.addEventListener("keydown", (e) => {
+    if (!lightbox.classList.contains("active")) return;
+
+    if (e.key === "ArrowRight") showNext();
+    if (e.key === "ArrowLeft") showPrev();
+    if (e.key === "Escape") closeLightbox();
+  });
+</script>
 
 <script>
   const mobileMenuButton = document.getElementById("mobileMenuButton");
