@@ -693,29 +693,43 @@ a.scroll-down {
   scroll-margin-top: 100px; 
 }
 
-/* --- LIGHTBOX NAVIGATION STYLES --- */
+/* --- MINIMALIST LIGHTBOX NAVIGATION --- */
 
-/* Navigation Buttons (Left/Right arrows) */
-.nav-btn {
+/* Shared Button Styles */
+.nav-btn,
+#close-btn {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
   background: none;
   border: none;
-  color: white;
-  font-size: 3rem;
-  padding: 0 1rem;
+  color: #fff;
   cursor: pointer;
-  z-index: 10001; /* Above the image */
-  opacity: 0.7;
-  transition: opacity 0.3s ease;
-  user-select: none;
+  z-index: 10001;
+  transition: opacity 0.3s ease, transform 0.2s ease;
+  
+  /* MINIMALIST LOOK: */
+  opacity: 0.6;           /* Subtle by default */
+  font-family: "Lato", sans-serif; /* Matches your site font */
+  font-weight: 300;       /* Thin font weight */
+  user-select: none;      /* Prevents highlighting */
+  -webkit-tap-highlight-color: transparent; /* Removes blue tap box on mobile */
 }
 
-.nav-btn:hover {
+/* Hover Effect: Brighten and slight scale */
+.nav-btn:hover,
+#close-btn:hover {
   opacity: 1;
+  transform: scale(1.1); /* Tiny grow effect */
 }
 
+/* Left & Right Arrows */
+.nav-btn {
+  top: 50%;
+  transform: translateY(-50%); /* Center vertically */
+  font-size: 2rem;  /* Much smaller (was 3rem) */
+  padding: 20px;    /* Large padding makes it easy to click even if the icon is small */
+}
+
+/* Specific Positions */
 #prev-btn {
   left: 10px;
 }
@@ -724,32 +738,30 @@ a.scroll-down {
   right: 10px;
 }
 
-/* Close Button (Top Right) */
+/* Close Button (X) */
 #close-btn {
-  position: absolute;
   top: 20px;
-  right: 30px;
-  color: white;
-  font-size: 3rem;
-  font-weight: bold;
-  cursor: pointer;
-  z-index: 10001;
+  right: 20px;
+  font-size: 2rem; /* Matches arrows */
   line-height: 1;
-  opacity: 0.8;
+  padding: 10px;
 }
 
-#close-btn:hover {
-  opacity: 1;
-}
-
-/* Mobile adjustments for buttons */
+/* --- MOBILE ADJUSTMENTS --- */
+/* On phone screens, we push buttons to the very edge and make them a bit larger for fingers */
 @media (max-width: 600px) {
   .nav-btn {
-    font-size: 2rem;
-    padding: 1rem;
+    font-size: 1.5rem; 
+    padding: 15px;     
   }
+  
   #prev-btn { left: 0; }
   #next-btn { right: 0; }
+  
+  #close-btn {
+    top: 15px;
+    right: 15px;
+  }
 }
 
 
