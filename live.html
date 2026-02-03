@@ -132,86 +132,88 @@
   </footer> 
 
   <!-- Lightbox -->
-  <div id="lightbox">
-    <span id="close-btn">&times;</span> <button id="prev-btn" class="nav-btn">&#10094;</button>
-    <img id="lightbox-img" src="" alt="">
-    <button id="next-btn" class="nav-btn">&#10095;</button>
-  </div>
-
   <script>
-    const lightbox = document.getElementById("lightbox");
-    const lightboxImg = document.getElementById("lightbox-img");
-    const closeBtn = document.getElementById("close-btn");
-    const prevBtn = document.getElementById("prev-btn");
-    const nextBtn = document.getElementById("next-btn");
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const closeBtn = document.getElementById("close-btn");
+  const prevBtn = document.getElementById("prev-btn");
+  const nextBtn = document.getElementById("next-btn");
   
-  // Create an array of all images in the gallery
-    const galleryImages = Array.from(document.querySelectorAll(".gallery img"));
-    let currentIndex = 0;
+  const galleryImages = Array.from(document.querySelectorAll(".gallery img"));
+  let currentIndex = 0;
 
   // Function to open Lightbox
   function openLightbox(index) {
     currentIndex = index;
     updateImage();
     lightbox.classList.add("active");
+    
+    // HISTORY TRICK: Push a new state so the "Back" button has something to remove
+    history.pushState({ lightboxActive: true }, "", "#lightbox");
   }
 
-  // Function to update the image source based on currentIndex
+  // Function to update the image source
   function updateImage() {
     const image = galleryImages[currentIndex];
     lightboxImg.src = image.src;
     lightboxImg.alt = image.alt;
   }
 
-  // Function: Go to Next Image
   function showNext(e) {
-    if (e) e.stopPropagation(); // Prevent closing lightbox when clicking button
+    if (e) e.stopPropagation();
     currentIndex++;
-    if (currentIndex >= galleryImages.length) {
-      currentIndex = 0; // Loop back to start
-    }
+    if (currentIndex >= galleryImages.length) currentIndex = 0;
     updateImage();
   }
 
-  // Function: Go to Previous Image
   function showPrev(e) {
-    if (e) e.stopPropagation(); 
+    if (e) e.stopPropagation();
     currentIndex--;
-    if (currentIndex < 0) {
-      currentIndex = galleryImages.length - 1; // Loop to end
-    }
+    if (currentIndex < 0) currentIndex = galleryImages.length - 1;
     updateImage();
   }
 
   // Function: Close Lightbox
   function closeLightbox() {
+    // If the lightbox is open AND we have a history state (meaning we pushed it earlier),
+    // we use history.back() to close it. This ensures the URL returns to normal.
+    if (lightbox.classList.contains("active") && history.state && history.state.lightboxActive) {
+      history.back(); 
+    } else {
+      // Fallback: Just close it visually (if opened without history for some reason)
+      performClose();
+    }
+  }
+
+  // Helper to actually hide the UI (called by the Back button listener)
+  function performClose() {
     lightbox.classList.remove("active");
     lightboxImg.src = "";
   }
 
-  // Event Listeners for Gallery Images
+  // LISTEN FOR THE BACK BUTTON (Popstate Event)
+  window.addEventListener("popstate", () => {
+    // When the user hits "Back", this event fires. We simply hide the lightbox.
+    performClose();
+  });
+
+  // Event Listeners
   galleryImages.forEach((image, index) => {
     image.addEventListener("click", () => {
       openLightbox(index);
     });
   });
 
-  // Event Listeners for Buttons
   if(nextBtn) nextBtn.addEventListener("click", showNext);
   if(prevBtn) prevBtn.addEventListener("click", showPrev);
   if(closeBtn) closeBtn.addEventListener("click", closeLightbox);
 
-  // Close when clicking outside the image (on the background)
   lightbox.addEventListener("click", (e) => {
-    if (e.target === lightbox) {
-      closeLightbox();
-    }
+    if (e.target === lightbox) closeLightbox();
   });
 
-  // Keyboard Navigation
   document.addEventListener("keydown", (e) => {
     if (!lightbox.classList.contains("active")) return;
-
     if (e.key === "ArrowRight") showNext();
     if (e.key === "ArrowLeft") showPrev();
     if (e.key === "Escape") closeLightbox();
