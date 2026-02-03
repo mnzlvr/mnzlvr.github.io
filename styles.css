@@ -693,7 +693,7 @@ a.scroll-down {
   scroll-margin-top: 100px; 
 }
 
-/* --- MINIMALIST LIGHTBOX NAVIGATION --- */
+/* --- MINIMALIST LIGHTBOX NAVIGATION (FIXED) --- */
 
 /* Shared Button Styles */
 .nav-btn,
@@ -704,63 +704,66 @@ a.scroll-down {
   color: #fff;
   cursor: pointer;
   z-index: 10001;
-  transition: opacity 0.3s ease, transform 0.2s ease;
+  transition: opacity 0.2s ease, transform 0.2s ease;
   
   /* MINIMALIST LOOK: */
-  opacity: 0.6;           /* Subtle by default */
-  font-family: "Lato", sans-serif; /* Matches your site font */
-  font-weight: 300;       /* Thin font weight */
-  user-select: none;      /* Prevents highlighting */
-  -webkit-tap-highlight-color: transparent; /* Removes blue tap box on mobile */
+  opacity: 0.5;           /* Even more transparent by default */
+  font-family: "Lato", sans-serif; 
+  font-weight: 300;       
+  user-select: none;      
+  -webkit-tap-highlight-color: transparent;
 }
 
-/* Hover Effect: Brighten and slight scale */
-.nav-btn:hover,
+/* Hover Effect: Brighten + Tiny Scale + KEEP CENTERED */
+.nav-btn:hover {
+  opacity: 1;
+  /* The fix is here: we tell it to stay centered (-50%) AND scale up */
+  transform: translateY(-50%) scale(1.1); 
+}
+
 #close-btn:hover {
   opacity: 1;
-  transform: scale(1.1); /* Tiny grow effect */
+  transform: scale(1.1); /* Close button doesn't need vertical centering fix */
 }
 
 /* Left & Right Arrows */
 .nav-btn {
   top: 50%;
-  transform: translateY(-50%); /* Center vertically */
-  font-size: 2rem;  /* Much smaller (was 3rem) */
-  padding: 20px;    /* Large padding makes it easy to click even if the icon is small */
+  transform: translateY(-50%); /* Centers vertically */
+  font-size: 1.5rem; /* Smaller size (approx 24px) */
+  padding: 30px;     /* Large invisible padding so they are easy to click */
 }
 
 /* Specific Positions */
 #prev-btn {
-  left: 10px;
+  left: 5px; /* Closer to edge */
 }
 
 #next-btn {
-  right: 10px;
+  right: 5px; /* Closer to edge */
 }
 
 /* Close Button (X) */
 #close-btn {
-  top: 20px;
-  right: 20px;
-  font-size: 2rem; /* Matches arrows */
-  line-height: 1;
+  top: 15px;
+  right: 15px;
+  font-size: 1.5rem; /* Match arrow size */
   padding: 10px;
 }
 
 /* --- MOBILE ADJUSTMENTS --- */
-/* On phone screens, we push buttons to the very edge and make them a bit larger for fingers */
 @media (max-width: 600px) {
   .nav-btn {
-    font-size: 1.5rem; 
-    padding: 15px;     
+    font-size: 1.2rem; /* Even smaller on phone */
+    padding: 20px;     
   }
   
   #prev-btn { left: 0; }
   #next-btn { right: 0; }
   
   #close-btn {
-    top: 15px;
-    right: 15px;
+    top: 10px;
+    right: 10px;
   }
 }
 
