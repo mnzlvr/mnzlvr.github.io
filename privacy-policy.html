@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Oliver Muñoz Photography</title>
+
+  <meta name="description" content="Contact Oliver Muñoz for booking live music and film photography in Berlin.">
+
+  <link rel="canonical" href="https://www.olivermunozphotography.com/contact.html">
+
+  <meta property="og:title" content="Contact — Oliver Muñoz">
+  <meta property="og:description" content="Get in touch with Berlin photographer Oliver Muñoz.">
+  <meta property="og:image" content="https://www.olivermunozphotography.com/assets/og-image.jpg">
+  <meta property="og:url" content="https://www.olivermunozphotography.com/contact.html">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon.png">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <script>
+    document.addEventListener('contextmenu', event => event.preventDefault());
+  </script>
+</head>
+
+<body>
+
+  <header>
+  <div class="logo">OLIVER MUÑOZ</div>
+
+  <div class="mobile-menu-icon" id="mobileMenuButton">☰</div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="live.html">Live</a>
+    <a href="film.html">Film</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+   </div>
+
+   <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="live.html">Live</a></li>
+      <li><a href="film.html">Film</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+   </nav>
+</header>
+
+
+
+  <footer class="footer-wrap">
+  <div class="footer">
+    © 2026 Oliver Muñoz | All Rights Reserved
+  </div>
+
+  <div class="social-icons" aria-label="social links">
+    <a href="https://www.instagram.com/mnzlvr" target="_blank" rel="noopener">
+      <img src="assets/icon-instagram-250.png" alt="Instagram">
+    </a>
+
+    <a href="mailto:olivermunozgalvan@gmail.com">
+      <img src="assets/icon-mail-250.png" alt="Email">
+    </a>
+  </div>
+  </footer> 
+
+<script>
+  const mobileMenuButton = document.getElementById("mobileMenuButton");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  mobileMenuButton.addEventListener("click", () => {
+    mobileMenu.style.display =
+      mobileMenu.style.display === "flex" ? "none" : "flex";
+  });
+</script>
+  
+</body>
+</html>
