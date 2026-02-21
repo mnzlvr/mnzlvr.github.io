@@ -59,7 +59,7 @@ nav a:hover {
 
 /* HERO */
 .hero {
-  min-height: 25vh;   /* smaller and more elegant */
+  min-height: 25vh;  /* smaller and more elegant */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -376,6 +376,35 @@ nav a:hover {
   margin: 0;         /* remove extra margins */
 }
 
+/* NEW: Footer Legal Links Style - integrated here */
+.footer-legal-container {
+  margin-top: 0.8rem;
+  text-align: center;
+}
+
+.footer-legal-links {
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  opacity: 0.4;
+  transition: opacity 0.3s ease;
+  color: #666;
+}
+
+.footer-legal-links:hover {
+  opacity: 0.9;
+}
+
+.footer-legal-links a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.legal-separator {
+  margin: 0 10px;
+  opacity: 0.5;
+}
+
 /* Social icons row right below the footer text */
 .footer-wrap .social-icons {
   margin: .35rem auto 0;   /* small gap between footer text and icons */
@@ -395,7 +424,7 @@ nav a:hover {
   background: transparent;
   opacity: 0.85;
   transition: transform .12s ease, opacity .12s ease;
-  margin: 0;               /* remove any extra per-image margin */
+  margin: 0;                /* remove any extra per-image margin */
 }
 
 /* hover */
@@ -507,7 +536,7 @@ nav a:hover {
 
 
   /* ----------------------------------- */
-  /*       GENERAL MOBILE SPACING        */
+  /* GENERAL MOBILE SPACING        */
   /* ----------------------------------- */
   body, p {
     padding-left: 0.1rem;
@@ -527,7 +556,7 @@ nav a:hover {
 
 
   /* ----------------------------------- */
-  /*     ABOUT PAGE — CENTER THE IMAGE   */
+  /* ABOUT PAGE — CENTER THE IMAGE   */
   /* ----------------------------------- */
   .about-image img,
   .about-section img {
@@ -540,7 +569,7 @@ nav a:hover {
 
 
   /* ----------------------------------- */
-  /*     LIVE / FILM PAGE TEXT SPACING   */
+  /* LIVE / FILM PAGE TEXT SPACING   */
   /* ----------------------------------- */
   .live-text,
   .film-text,
@@ -560,7 +589,7 @@ nav a:hover {
 
 
   /* ----------------------------------- */
-  /*        CONTACT FORM SPACING         */
+  /* CONTACT FORM SPACING         */
   /* ----------------------------------- */
   form,
   .contact-form,
@@ -583,7 +612,7 @@ nav a:hover {
 }
 
 /* =========================================
-   NEW MODERN HOMEPAGE STYLES
+    NEW MODERN HOMEPAGE STYLES
    ========================================= */
 
 /* 1. Reset specific to the homepage body */
@@ -596,7 +625,7 @@ body.homepage {
 .hero-cinematic {
   position: relative;
   /* This calculates 100% of the screen height MINUS the header height (76px).
-     This makes the image fit perfectly without scrolling. */
+      This makes the image fit perfectly without scrolling. */
   height: calc(100vh - 76px); 
   width: 100%;
   display: flex;
@@ -767,7 +796,42 @@ a.scroll-down {
   }
 }
 
+/* =========================================
+   NEW: LEGAL PAGES CONTENT STYLES
+   ========================================= */
+.legal-content-body {
+  max-width: 800px;
+  margin: 60px auto 100px;
+  padding: 0 2.5rem;
+  line-height: 1.8;
+  color: #333;
+}
 
+.legal-content-body h1 {
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 2rem 0;
+}
 
+.legal-content-body h2 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  margin-top: 2.5rem;
+  letter-spacing: 1px;
+  color: #111;
+}
 
+.legal-back-btn {
+  text-decoration: none;
+  color: #111;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
 
+.legal-back-btn:hover {
+  opacity: 1;
+}
