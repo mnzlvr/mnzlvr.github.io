@@ -376,7 +376,7 @@ nav a:hover {
   margin: 0;         /* remove extra margins */
 }
 
-/* NEW: Footer Legal Links Style - integrated here */
+/* --- UPDATED: INDIVIDUAL LINK HOVER --- */
 .footer-legal-container {
   margin-top: 0.8rem;
   text-align: center;
@@ -386,23 +386,28 @@ nav a:hover {
   font-size: 10px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  opacity: 0.4;
-  transition: opacity 0.3s ease;
   color: #666;
-}
-
-.footer-legal-links:hover {
-  opacity: 0.9;
+  /* Removed opacity from here so it doesn't affect the whole row */
 }
 
 .footer-legal-links a {
   text-decoration: none;
-  color: inherit;
+  color: inherit !important;
+  opacity: 0.4; /* Links start muted individually */
+  transition: opacity 0.3s ease;
+  display: inline-block;
+}
+
+/* Only the specific link being hovered will light up */
+.footer-legal-links a:hover {
+  opacity: 1 !important;
+  color: #111 !important;
 }
 
 .legal-separator {
   margin: 0 10px;
-  opacity: 0.5;
+  opacity: 0.2; /* Separator stays very faint and never highlights */
+  user-select: none;
 }
 
 /* Social icons row right below the footer text */
@@ -835,3 +840,4 @@ a.scroll-down {
 .legal-back-btn:hover {
   opacity: 1;
 }
+
