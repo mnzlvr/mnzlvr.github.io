@@ -390,23 +390,27 @@ nav a:hover {
   /* Removed opacity from here so it doesn't affect the whole row */
 }
 
+/* --- TWEAKED FOR BETTER VISIBILITY --- */
 .footer-legal-links a {
   text-decoration: none;
-  color: inherit !important;
-  opacity: 0.4; /* Links start muted individually */
+  color: #111 !important; /* Force the dark grey/black color */
+  opacity: 0.6;           /* Increased from 0.4 for better readability */
+  font-weight: 400;       /* Slightly thicker than the default 300 */
+  letter-spacing: 2.5px;  /* Slightly more air between letters for that premium look */
   transition: opacity 0.3s ease;
   display: inline-block;
 }
 
-/* Only the specific link being hovered will light up */
+/* Specific hover - full visibility */
 .footer-legal-links a:hover {
   opacity: 1 !important;
-  color: #111 !important;
 }
 
+/* Making the separator a bit more distinct too */
 .legal-separator {
-  margin: 0 10px;
-  opacity: 0.2; /* Separator stays very faint and never highlights */
+  margin: 0 12px;
+  opacity: 0.4;           /* Upped from 0.2 */
+  color: #111;
   user-select: none;
 }
 
@@ -840,4 +844,5 @@ a.scroll-down {
 .legal-back-btn:hover {
   opacity: 1;
 }
+
 
