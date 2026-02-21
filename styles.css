@@ -376,21 +376,25 @@ nav a:hover {
   margin: 0;         /* remove extra margins */
 }
 
-/* --- UPDATED: INDIVIDUAL LINK HOVER --- */
 .footer-legal-container {
-  margin-top: 0.8rem;
-  text-align: center;
+  margin-top: 1.5rem;   /* Space below the social icons */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;            /* This keeps them close together */
 }
 
-.footer-legal-links {
+.footer-legal-link {
   font-size: 10px;
-  letter-spacing: 2px;
+  letter-spacing: 2.5px;
   text-transform: uppercase;
-  color: #666;
-  /* Removed opacity from here so it doesn't affect the whole row */
+  text-decoration: none;
+  color: #111 !important;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  display: inline-block;
 }
 
-/* --- TWEAKED FOR BETTER VISIBILITY --- */
 .footer-legal-links a {
   text-decoration: none;
   color: #111 !important; /* Force the dark grey/black color */
@@ -406,12 +410,12 @@ nav a:hover {
   opacity: 1 !important;
 }
 
-/* Making the separator a bit more distinct too */
-.legal-separator {
-  margin: 0 12px;
-  opacity: 0.4;           /* Upped from 0.2 */
-  color: #111;
-  user-select: none;
+/* Ensure no weird spacing on mobile */
+@media (max-width: 800px) {
+  .footer-legal-container {
+    margin-top: 1.2rem;
+    gap: 12px; /* Slightly more gap for easier finger-tapping on phones */
+  }
 }
 
 /* Social icons row right below the footer text */
@@ -844,5 +848,6 @@ a.scroll-down {
 .legal-back-btn:hover {
   opacity: 1;
 }
+
 
 
